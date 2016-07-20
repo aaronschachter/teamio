@@ -4,9 +4,11 @@
 //
 
 #import "TMIOUserListViewController.h"
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 @interface TMIOUserListViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) NSMutableArray *users;
 @property (strong, nonatomic) UITableView *tableView;
 
 @end
@@ -16,13 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"My team";
+    self.title = @"teamio";
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    [self.view addSubview:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"userCell"];
+    [self.view addSubview:self.tableView];
+
+    self.users = [[NSMutableArray alloc] init];
+
+    NSDictionary *secretsDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"secrets" ofType:@"plist"]];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSString *apiURLString = [NSString stringWithFormat:@"https://slack.com/api/users.list?token=%@", secretsDict[@"slackApiKey"]];
+    [manager GET:apiURLString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSDictionary *responseDict = (NSDictionary *)responseObject;
+        for (NSDictionary *memberDict in (NSArray *)responseDict[@"members"]) {
+            [self.users addObject:memberDict];
+            [self.tableView reloadData];
+        }
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 
@@ -33,12 +49,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.users.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userCell" forIndexPath:indexPath];
+    NSDictionary *memberDict = (NSDictionary *)self.users[indexPath.row];
+    cell.textLabel.text = memberDict[@"real_name"];
     return cell;
 }
 
