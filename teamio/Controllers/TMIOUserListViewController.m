@@ -4,6 +4,7 @@
 //
 
 #import "TMIOUserListViewController.h"
+#import "TMIOUserProfileViewController.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 
 @interface TMIOUserListViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -18,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"teamio";
+    self.title = @"#team";
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -58,6 +59,14 @@
     NSDictionary *memberDict = (NSDictionary *)self.users[indexPath.row];
     cell.textLabel.text = memberDict[@"real_name"];
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *memberDict = (NSDictionary *)self.users[indexPath.row];
+    TMIOUserProfileViewController *viewController =  [[TMIOUserProfileViewController alloc] initWithUserDict:memberDict];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end
