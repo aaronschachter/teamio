@@ -2,11 +2,9 @@
 //  AppDelegate.m
 //  teamio
 //
-//  Created by Aaron Schachter on 7/19/16.
-//  Copyright © 2016 New School Old School. All rights reserved.
-//
 
 #import "AppDelegate.h"
+#import "TMIOUserListViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +14,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    TMIOUserListViewController *userListViewController = [[TMIOUserListViewController alloc] init];
+    UINavigationController *navigationContoller = [[UINavigationController alloc] initWithRootViewController:userListViewController];
+    self.window.rootViewController = navigationContoller;
+    
     return YES;
 }
 

@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1152DC7DF7F9A6C4B71E4ABD /* libPods-teamioUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F571D35F29141120908F9C68 /* libPods-teamioUITests.a */; };
+		8154006DEA9BDBBA8BB174BA /* libPods-teamioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F6F4BC979DA45859E3277D /* libPods-teamioTests.a */; };
 		B2DF73B61D3F0553000D4998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B51D3F0553000D4998 /* main.m */; };
 		B2DF73B91D3F0553000D4998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B81D3F0553000D4998 /* AppDelegate.m */; };
-		B2DF73BC1D3F0553000D4998 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73BB1D3F0553000D4998 /* ViewController.m */; };
-		B2DF73BF1D3F0553000D4998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DF73BD1D3F0553000D4998 /* Main.storyboard */; };
+		B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73BB1D3F0553000D4998 /* TMIOUserListViewController.m */; };
 		B2DF73C11D3F0553000D4998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DF73C01D3F0553000D4998 /* Assets.xcassets */; };
 		B2DF73C41D3F0553000D4998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DF73C21D3F0553000D4998 /* LaunchScreen.storyboard */; };
 		B2DF73CF1D3F0553000D4998 /* teamioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73CE1D3F0553000D4998 /* teamioTests.m */; };
 		B2DF73DA1D3F0553000D4998 /* teamioUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73D91D3F0553000D4998 /* teamioUITests.m */; };
+		FE2B1679E9C360DD245EAAAC /* libPods-teamio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C15C8D6E8549B47050144252 /* libPods-teamio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +37,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231D904385BDC5B24D3E1BC5 /* Pods-teamio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamio/Pods-teamio.debug.xcconfig"; sourceTree = "<group>"; };
+		4A36FC3F7E06AA6C2C821369 /* Pods-teamio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamio.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamio/Pods-teamio.release.xcconfig"; sourceTree = "<group>"; };
+		57F6F4BC979DA45859E3277D /* libPods-teamioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teamioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60253A27D78E7660A96CEA03 /* Pods-teamioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamioTests/Pods-teamioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2DF73B11D3F0553000D4998 /* teamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DF73B51D3F0553000D4998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2DF73B71D3F0553000D4998 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2DF73B81D3F0553000D4998 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B2DF73BA1D3F0553000D4998 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B2DF73BB1D3F0553000D4998 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B2DF73BE1D3F0553000D4998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B2DF73C01D3F0553000D4998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2DF73BA1D3F0553000D4998 /* TMIOUserListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMIOUserListViewController.h; path = Controllers/TMIOUserListViewController.h; sourceTree = "<group>"; };
+		B2DF73BB1D3F0553000D4998 /* TMIOUserListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TMIOUserListViewController.m; path = Controllers/TMIOUserListViewController.m; sourceTree = "<group>"; };
+		B2DF73C01D3F0553000D4998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		B2DF73C31D3F0553000D4998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2DF73C51D3F0553000D4998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DF73CA1D3F0553000D4998 /* teamioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teamioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +56,11 @@
 		B2DF73D51D3F0553000D4998 /* teamioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teamioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DF73D91D3F0553000D4998 /* teamioUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = teamioUITests.m; sourceTree = "<group>"; };
 		B2DF73DB1D3F0553000D4998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B00841BE0DEB10DA0CB475 /* Pods-teamioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamioTests/Pods-teamioTests.release.xcconfig"; sourceTree = "<group>"; };
+		C15C8D6E8549B47050144252 /* libPods-teamio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teamio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5261362962782C3ED54B8DA /* Pods-teamioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamioUITests/Pods-teamioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D7D10A8E4CFA1B4D71FDBCEA /* Pods-teamioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamioUITests/Pods-teamioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F571D35F29141120908F9C68 /* libPods-teamioUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teamioUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2B1679E9C360DD245EAAAC /* libPods-teamio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8154006DEA9BDBBA8BB174BA /* libPods-teamioTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +84,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1152DC7DF7F9A6C4B71E4ABD /* libPods-teamioUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B90084FF286E0CFB7FA7347 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				231D904385BDC5B24D3E1BC5 /* Pods-teamio.debug.xcconfig */,
+				4A36FC3F7E06AA6C2C821369 /* Pods-teamio.release.xcconfig */,
+				60253A27D78E7660A96CEA03 /* Pods-teamioTests.debug.xcconfig */,
+				C0B00841BE0DEB10DA0CB475 /* Pods-teamioTests.release.xcconfig */,
+				D7D10A8E4CFA1B4D71FDBCEA /* Pods-teamioUITests.debug.xcconfig */,
+				C5261362962782C3ED54B8DA /* Pods-teamioUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68E2BD09B218744BC27CC330 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C15C8D6E8549B47050144252 /* libPods-teamio.a */,
+				57F6F4BC979DA45859E3277D /* libPods-teamioTests.a */,
+				F571D35F29141120908F9C68 /* libPods-teamioUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B285FFFC1D3F144F00DC0178 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2DF73BA1D3F0553000D4998 /* TMIOUserListViewController.h */,
+				B2DF73BB1D3F0553000D4998 /* TMIOUserListViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B285FFFD1D3F1BD500DC0178 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2DF73C01D3F0553000D4998 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B285FFFE1D3F1BDD00DC0178 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2DF73C21D3F0553000D4998 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		B2DF73A81D3F0553000D4998 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +146,8 @@
 				B2DF73CD1D3F0553000D4998 /* teamioTests */,
 				B2DF73D81D3F0553000D4998 /* teamioUITests */,
 				B2DF73B21D3F0553000D4998 /* Products */,
+				3B90084FF286E0CFB7FA7347 /* Pods */,
+				68E2BD09B218744BC27CC330 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +166,9 @@
 			children = (
 				B2DF73B71D3F0553000D4998 /* AppDelegate.h */,
 				B2DF73B81D3F0553000D4998 /* AppDelegate.m */,
-				B2DF73BA1D3F0553000D4998 /* ViewController.h */,
-				B2DF73BB1D3F0553000D4998 /* ViewController.m */,
-				B2DF73BD1D3F0553000D4998 /* Main.storyboard */,
-				B2DF73C01D3F0553000D4998 /* Assets.xcassets */,
-				B2DF73C21D3F0553000D4998 /* LaunchScreen.storyboard */,
-				B2DF73C51D3F0553000D4998 /* Info.plist */,
+				B285FFFC1D3F144F00DC0178 /* Controllers */,
+				B285FFFE1D3F1BDD00DC0178 /* Views */,
+				B285FFFD1D3F1BD500DC0178 /* Resources */,
 				B2DF73B41D3F0553000D4998 /* Supporting Files */,
 			);
 			path = teamio;
@@ -117,6 +177,7 @@
 		B2DF73B41D3F0553000D4998 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2DF73C51D3F0553000D4998 /* Info.plist */,
 				B2DF73B51D3F0553000D4998 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -147,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2DF73DE1D3F0553000D4998 /* Build configuration list for PBXNativeTarget "teamio" */;
 			buildPhases = (
+				1D68C28EDCA00C85072A9C53 /* [CP] Check Pods Manifest.lock */,
 				B2DF73AD1D3F0553000D4998 /* Sources */,
 				B2DF73AE1D3F0553000D4998 /* Frameworks */,
 				B2DF73AF1D3F0553000D4998 /* Resources */,
+				6F825744EFFD5CA692134744 /* [CP] Embed Pods Frameworks */,
+				05984A5C0A9A667F7F1B0317 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2DF73E11D3F0553000D4998 /* Build configuration list for PBXNativeTarget "teamioTests" */;
 			buildPhases = (
+				783FD5C96FE47506392E0DA8 /* [CP] Check Pods Manifest.lock */,
 				B2DF73C61D3F0553000D4998 /* Sources */,
 				B2DF73C71D3F0553000D4998 /* Frameworks */,
 				B2DF73C81D3F0553000D4998 /* Resources */,
+				1191F09EF2C750125E463B76 /* [CP] Embed Pods Frameworks */,
+				DE60D034A1D1686A0DBF2879 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2DF73E41D3F0553000D4998 /* Build configuration list for PBXNativeTarget "teamioUITests" */;
 			buildPhases = (
+				FFECA0028C8C058D39B626B9 /* [CP] Check Pods Manifest.lock */,
 				B2DF73D11D3F0553000D4998 /* Sources */,
 				B2DF73D21D3F0553000D4998 /* Frameworks */,
 				B2DF73D31D3F0553000D4998 /* Resources */,
+				62A3CEE1F1D48792C9529B3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +271,7 @@
 		B2DF73A91D3F0553000D4998 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TMIO;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "New School Old School";
 				TargetAttributes = {
@@ -245,7 +315,6 @@
 			files = (
 				B2DF73C41D3F0553000D4998 /* LaunchScreen.storyboard in Resources */,
 				B2DF73C11D3F0553000D4998 /* Assets.xcassets in Resources */,
-				B2DF73BF1D3F0553000D4998 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,12 +334,135 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05984A5C0A9A667F7F1B0317 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamio/Pods-teamio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1191F09EF2C750125E463B76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamioTests/Pods-teamioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D68C28EDCA00C85072A9C53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		62A3CEE1F1D48792C9529B3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamioUITests/Pods-teamioUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F825744EFFD5CA692134744 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamio/Pods-teamio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		783FD5C96FE47506392E0DA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DE60D034A1D1686A0DBF2879 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teamioTests/Pods-teamioTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFECA0028C8C058D39B626B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B2DF73AD1D3F0553000D4998 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2DF73BC1D3F0553000D4998 /* ViewController.m in Sources */,
+				B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */,
 				B2DF73B91D3F0553000D4998 /* AppDelegate.m in Sources */,
 				B2DF73B61D3F0553000D4998 /* main.m in Sources */,
 			);
@@ -308,14 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2DF73BD1D3F0553000D4998 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2DF73BE1D3F0553000D4998 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2DF73C21D3F0553000D4998 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,6 +597,7 @@
 		};
 		B2DF73DF1D3F0553000D4998 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 231D904385BDC5B24D3E1BC5 /* Pods-teamio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = teamio/Info.plist;
@@ -424,6 +609,7 @@
 		};
 		B2DF73E01D3F0553000D4998 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A36FC3F7E06AA6C2C821369 /* Pods-teamio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = teamio/Info.plist;
@@ -435,6 +621,7 @@
 		};
 		B2DF73E21D3F0553000D4998 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60253A27D78E7660A96CEA03 /* Pods-teamioTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = teamioTests/Info.plist;
@@ -447,6 +634,7 @@
 		};
 		B2DF73E31D3F0553000D4998 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B00841BE0DEB10DA0CB475 /* Pods-teamioTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = teamioTests/Info.plist;
@@ -459,6 +647,7 @@
 		};
 		B2DF73E51D3F0553000D4998 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7D10A8E4CFA1B4D71FDBCEA /* Pods-teamioUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = teamioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -470,6 +659,7 @@
 		};
 		B2DF73E61D3F0553000D4998 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5261362962782C3ED54B8DA /* Pods-teamioUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = teamioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -498,6 +688,7 @@
 				B2DF73E01D3F0553000D4998 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2DF73E11D3F0553000D4998 /* Build configuration list for PBXNativeTarget "teamioTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +697,7 @@
 				B2DF73E31D3F0553000D4998 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2DF73E41D3F0553000D4998 /* Build configuration list for PBXNativeTarget "teamioUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +706,7 @@
 				B2DF73E61D3F0553000D4998 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
