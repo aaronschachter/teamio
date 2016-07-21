@@ -30,25 +30,27 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"userCell"];
     [self.view addSubview:self.tableView];
     
-    __block TMIOAppDelegate *appDelegate = (TMIOAppDelegate *)[UIApplication sharedApplication].delegate;
-    self.users = [TMIOUser fetchUsersInManagedObjectContext:appDelegate.managedObjectContext];
+    [self loadUsers];
+}
 
-    // For now, assuming we don't need to fetch latest data from server if we already have users stored locally.
-    if (self.users.count > 0) {
-        [self.tableView reloadData];
-        return;
-    }
+#pragma mark - TMIOUserListViewController
+
+- (void)loadUsers {
+    __block TMIOAppDelegate *appDelegate = (TMIOAppDelegate *)[UIApplication sharedApplication].delegate;
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager loadUsersInManagedObjectContext:appDelegate.managedObjectContext completionHandler:^(NSArray *users) {
         self.users = users;
         [self.tableView reloadData];
     } errorHandler:^(NSError *error) {
-        // @todo Display epic fail message.
+        // @todo Display epic fail message if no network connection and self.users is empty.
+        self.users = [TMIOUser fetchUsersInManagedObjectContext:appDelegate.managedObjectContext];
+        if (self.users.count > 0) {
+            [self.tableView reloadData];
+            return;
+        }
     }];
 }
-
-#pragma mark - TMIOUserListViewController
 
 - (TMIOUser *)userForIndexPath:(NSIndexPath *)indexPath {
     return (TMIOUser *)self.users[indexPath.row];
