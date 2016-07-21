@@ -4,6 +4,7 @@
 //
 
 #import "TMIOUserProfileViewController.h"
+#import "TMIOUserProfileHeaderCell.h"
 
 @interface TMIOUserProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -37,7 +38,10 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"profileCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TMIOUserProfileHeaderCell" bundle:nil] forCellReuseIdentifier:@"profileHeaderCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.estimatedRowHeight = 44;
+
     [self.view addSubview:self.tableView];
 }
 
@@ -53,21 +57,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell" forIndexPath:indexPath];
-    NSString *labelText = @"";
-    switch (indexPath.row) {
-        case 0:
-            labelText = [NSString stringWithFormat:@"@%@", self.user.userName];
-            break;
-        case 1:
-            labelText = self.user.title;
-            break;
+    if (indexPath.row == 0) {
+        TMIOUserProfileHeaderCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"profileHeaderCell" forIndexPath:indexPath];
+        headerCell.profileImageViewURLString = self.user.avatarUri;
+        headerCell.userNameLabelText = [NSString stringWithFormat:@"@%@", self.user.userName];
+        headerCell.backgroundColor = [self.user color];
+        headerCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return headerCell;
     }
-    cell.textLabel.text = labelText;
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell" forIndexPath:indexPath];
+    cell.textLabel.text = self.user.title;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 220;
+    }
+    return UITableViewAutomaticDimension;
 }
 
 @end

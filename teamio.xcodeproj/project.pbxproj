@@ -13,6 +13,8 @@
 		B28500031D3F375F00DC0178 /* TMIOUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28500021D3F375F00DC0178 /* TMIOUserProfileViewController.m */; };
 		B287FCAA1D405E050065F5F2 /* TMIOUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B287FCA71D405E050065F5F2 /* TMIOUser+CoreDataProperties.m */; };
 		B287FCAB1D405E050065F5F2 /* TMIOUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B287FCA91D405E050065F5F2 /* TMIOUser.m */; };
+		B287FCAF1D4088840065F5F2 /* TMIOUserProfileHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B287FCAD1D4088840065F5F2 /* TMIOUserProfileHeaderCell.m */; };
+		B287FCB01D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B287FCAE1D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib */; };
 		B2DF73B61D3F0553000D4998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B51D3F0553000D4998 /* main.m */; };
 		B2DF73B91D3F0553000D4998 /* TMIOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B81D3F0553000D4998 /* TMIOAppDelegate.m */; };
 		B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73BB1D3F0553000D4998 /* TMIOUserListViewController.m */; };
@@ -54,6 +56,9 @@
 		B287FCA71D405E050065F5F2 /* TMIOUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TMIOUser+CoreDataProperties.m"; path = "Models/TMIOUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B287FCA81D405E050065F5F2 /* TMIOUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMIOUser.h; path = Models/TMIOUser.h; sourceTree = "<group>"; };
 		B287FCA91D405E050065F5F2 /* TMIOUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMIOUser.m; path = Models/TMIOUser.m; sourceTree = "<group>"; };
+		B287FCAC1D4088840065F5F2 /* TMIOUserProfileHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMIOUserProfileHeaderCell.h; path = Views/TMIOUserProfileHeaderCell.h; sourceTree = "<group>"; };
+		B287FCAD1D4088840065F5F2 /* TMIOUserProfileHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMIOUserProfileHeaderCell.m; path = Views/TMIOUserProfileHeaderCell.m; sourceTree = "<group>"; };
+		B287FCAE1D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMIOUserProfileHeaderCell.xib; path = Views/TMIOUserProfileHeaderCell.xib; sourceTree = "<group>"; };
 		B2DF73B11D3F0553000D4998 /* teamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DF73B51D3F0553000D4998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2DF73B71D3F0553000D4998 /* TMIOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMIOAppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				B2DF73C21D3F0553000D4998 /* LaunchScreen.storyboard */,
+				B287FCAC1D4088840065F5F2 /* TMIOUserProfileHeaderCell.h */,
+				B287FCAD1D4088840065F5F2 /* TMIOUserProfileHeaderCell.m */,
+				B287FCAE1D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -344,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B287FCB01D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib in Resources */,
 				B2DF73C41D3F0553000D4998 /* LaunchScreen.storyboard in Resources */,
 				B2DF73C11D3F0553000D4998 /* Assets.xcassets in Resources */,
 				B28500001D3F332200DC0178 /* secrets.plist in Resources */,
@@ -494,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B287FCAF1D4088840065F5F2 /* TMIOUserProfileHeaderCell.m in Sources */,
 				B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */,
 				B2DF73B91D3F0553000D4998 /* TMIOAppDelegate.m in Sources */,
 				B2E4FEBE1D3F49030044FD8C /* Model.xcdatamodeld in Sources */,
