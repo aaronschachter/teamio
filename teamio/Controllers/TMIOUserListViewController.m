@@ -7,11 +7,11 @@
 #import "TMIOUserProfileViewController.h"
 #import "TMIOAppDelegate.h"
 #import "TMIOUser.h"
-#import <AFNetworking/AFHTTPSessionManager.h>
+#import "AFHTTPSessionManager+TMIO.h"
 
 @interface TMIOUserListViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) NSMutableArray *users;
+@property (strong, nonatomic) NSArray *users;
 @property (strong, nonatomic) UITableView *tableView;
 
 @end
@@ -29,50 +29,26 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"userCell"];
     [self.view addSubview:self.tableView];
+    
+    __block TMIOAppDelegate *appDelegate = (TMIOAppDelegate *)[UIApplication sharedApplication].delegate;
+    self.users = [TMIOUser fetchUsersInManagedObjectContext:appDelegate.managedObjectContext];
 
-    self.users = (NSMutableArray *)[TMIOUser fetchUsersInManagedObjectContext:self.managedObjectContext];
+    // For now, assuming we don't need to fetch latest data from server if we already have users stored locally.
     if (self.users.count > 0) {
         [self.tableView reloadData];
         return;
     }
-    
-    self.users = [[NSMutableArray alloc] init];
-    NSDictionary *secretsDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"secrets" ofType:@"plist"]];
+
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *apiURLString = [NSString stringWithFormat:@"https://slack.com/api/users.list?token=%@", secretsDict[@"slackApiKey"]];
-    [manager GET:apiURLString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSDictionary *responseDict = (NSDictionary *)responseObject;
-        for (NSDictionary *memberDict in (NSArray *)responseDict[@"members"]) {
-            TMIOUser *user = [self upsertUserWithDict:memberDict];
-            [self.users addObject:user];
-        }
-        NSError *error;
-        [self.managedObjectContext save:&error];
+    [manager loadUsersInManagedObjectContext:appDelegate.managedObjectContext completionHandler:^(NSArray *users) {
+        self.users = users;
         [self.tableView reloadData];
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+    } errorHandler:^(NSError *error) {
+        // @todo Display epic fail message.
     }];
 }
 
 #pragma mark - TMIOUserListViewController
-
-- (NSManagedObjectContext *)managedObjectContext {
-    __block TMIOAppDelegate *appDelegate = (TMIOAppDelegate *)[UIApplication sharedApplication].delegate;
-    return appDelegate.managedObjectContext;
-}
-
-- (TMIOUser *)upsertUserWithDict:(NSDictionary *)dict {
-    // @todo Check if ID exists. Right now we're blindly inserting.
-    TMIOUser *user = [TMIOUser createUserInManagedObjectContext:self. managedObjectContext];
-    user.userId = dict[@"id"];
-    user.colorHex = dict[@"color"];
-    user.userName = dict[@"name"];
-    user.realName = dict[@"real_name"];
-    // Note: we may want to use image_192 property if original image loadtimes are weaksauce.
-    user.avatarUri = [dict valueForKeyPath:@"profile.image_original"];
-    user.title = [dict valueForKeyPath:@"profile.title"];
-    return user;
-}
 
 - (TMIOUser *)userForIndexPath:(NSIndexPath *)indexPath {
     return (TMIOUser *)self.users[indexPath.row];
