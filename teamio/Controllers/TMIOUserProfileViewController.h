@@ -4,9 +4,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TMIOUser.h"
 
 @interface TMIOUserProfileViewController : UIViewController
 
-- (instancetype)initWithUserDict:(NSDictionary *)userDict;
+- (instancetype)initWithUser:(TMIOUser *)user;
 
 @end

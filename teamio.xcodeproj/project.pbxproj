@@ -11,13 +11,16 @@
 		8154006DEA9BDBBA8BB174BA /* libPods-teamioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F6F4BC979DA45859E3277D /* libPods-teamioTests.a */; };
 		B28500001D3F332200DC0178 /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = B285FFFF1D3F332200DC0178 /* secrets.plist */; };
 		B28500031D3F375F00DC0178 /* TMIOUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28500021D3F375F00DC0178 /* TMIOUserProfileViewController.m */; };
+		B287FCAA1D405E050065F5F2 /* TMIOUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B287FCA71D405E050065F5F2 /* TMIOUser+CoreDataProperties.m */; };
+		B287FCAB1D405E050065F5F2 /* TMIOUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B287FCA91D405E050065F5F2 /* TMIOUser.m */; };
 		B2DF73B61D3F0553000D4998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B51D3F0553000D4998 /* main.m */; };
-		B2DF73B91D3F0553000D4998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B81D3F0553000D4998 /* AppDelegate.m */; };
+		B2DF73B91D3F0553000D4998 /* TMIOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B81D3F0553000D4998 /* TMIOAppDelegate.m */; };
 		B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73BB1D3F0553000D4998 /* TMIOUserListViewController.m */; };
 		B2DF73C11D3F0553000D4998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2DF73C01D3F0553000D4998 /* Assets.xcassets */; };
 		B2DF73C41D3F0553000D4998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DF73C21D3F0553000D4998 /* LaunchScreen.storyboard */; };
 		B2DF73CF1D3F0553000D4998 /* teamioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73CE1D3F0553000D4998 /* teamioTests.m */; };
 		B2DF73DA1D3F0553000D4998 /* teamioUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73D91D3F0553000D4998 /* teamioUITests.m */; };
+		B2E4FEBE1D3F49030044FD8C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2E4FEBC1D3F49030044FD8C /* Model.xcdatamodeld */; };
 		FE2B1679E9C360DD245EAAAC /* libPods-teamio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C15C8D6E8549B47050144252 /* libPods-teamio.a */; };
 /* End PBXBuildFile section */
 
@@ -43,13 +46,18 @@
 		4A36FC3F7E06AA6C2C821369 /* Pods-teamio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamio.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamio/Pods-teamio.release.xcconfig"; sourceTree = "<group>"; };
 		57F6F4BC979DA45859E3277D /* libPods-teamioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teamioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60253A27D78E7660A96CEA03 /* Pods-teamioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamioTests/Pods-teamioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B255AA8F1D405511003B0977 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B28500011D3F375F00DC0178 /* TMIOUserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMIOUserProfileViewController.h; path = Controllers/TMIOUserProfileViewController.h; sourceTree = "<group>"; };
 		B28500021D3F375F00DC0178 /* TMIOUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMIOUserProfileViewController.m; path = Controllers/TMIOUserProfileViewController.m; sourceTree = "<group>"; };
 		B285FFFF1D3F332200DC0178 /* secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
+		B287FCA61D405E050065F5F2 /* TMIOUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TMIOUser+CoreDataProperties.h"; path = "Models/TMIOUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B287FCA71D405E050065F5F2 /* TMIOUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TMIOUser+CoreDataProperties.m"; path = "Models/TMIOUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B287FCA81D405E050065F5F2 /* TMIOUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMIOUser.h; path = Models/TMIOUser.h; sourceTree = "<group>"; };
+		B287FCA91D405E050065F5F2 /* TMIOUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMIOUser.m; path = Models/TMIOUser.m; sourceTree = "<group>"; };
 		B2DF73B11D3F0553000D4998 /* teamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DF73B51D3F0553000D4998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B2DF73B71D3F0553000D4998 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B2DF73B81D3F0553000D4998 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B2DF73B71D3F0553000D4998 /* TMIOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMIOAppDelegate.h; sourceTree = "<group>"; };
+		B2DF73B81D3F0553000D4998 /* TMIOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMIOAppDelegate.m; sourceTree = "<group>"; };
 		B2DF73BA1D3F0553000D4998 /* TMIOUserListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMIOUserListViewController.h; path = Controllers/TMIOUserListViewController.h; sourceTree = "<group>"; };
 		B2DF73BB1D3F0553000D4998 /* TMIOUserListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TMIOUserListViewController.m; path = Controllers/TMIOUserListViewController.m; sourceTree = "<group>"; };
 		B2DF73C01D3F0553000D4998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +69,7 @@
 		B2DF73D51D3F0553000D4998 /* teamioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teamioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DF73D91D3F0553000D4998 /* teamioUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = teamioUITests.m; sourceTree = "<group>"; };
 		B2DF73DB1D3F0553000D4998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2E4FEBD1D3F49030044FD8C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C0B00841BE0DEB10DA0CB475 /* Pods-teamioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamioTests/Pods-teamioTests.release.xcconfig"; sourceTree = "<group>"; };
 		C15C8D6E8549B47050144252 /* libPods-teamio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teamio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5261362962782C3ED54B8DA /* Pods-teamioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teamioUITests/Pods-teamioUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +121,7 @@
 		68E2BD09B218744BC27CC330 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B255AA8F1D405511003B0977 /* CoreData.framework */,
 				C15C8D6E8549B47050144252 /* libPods-teamio.a */,
 				57F6F4BC979DA45859E3277D /* libPods-teamioTests.a */,
 				F571D35F29141120908F9C68 /* libPods-teamioUITests.a */,
@@ -171,8 +181,9 @@
 		B2DF73B31D3F0553000D4998 /* teamio */ = {
 			isa = PBXGroup;
 			children = (
-				B2DF73B71D3F0553000D4998 /* AppDelegate.h */,
-				B2DF73B81D3F0553000D4998 /* AppDelegate.m */,
+				B2DF73B71D3F0553000D4998 /* TMIOAppDelegate.h */,
+				B2DF73B81D3F0553000D4998 /* TMIOAppDelegate.m */,
+				B2E4FEBF1D3F490B0044FD8C /* Models */,
 				B285FFFE1D3F1BDD00DC0178 /* Views */,
 				B285FFFC1D3F144F00DC0178 /* Controllers */,
 				B285FFFD1D3F1BD500DC0178 /* Resources */,
@@ -207,6 +218,18 @@
 				B2DF73DB1D3F0553000D4998 /* Info.plist */,
 			);
 			path = teamioUITests;
+			sourceTree = "<group>";
+		};
+		B2E4FEBF1D3F490B0044FD8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B287FCA61D405E050065F5F2 /* TMIOUser+CoreDataProperties.h */,
+				B287FCA71D405E050065F5F2 /* TMIOUser+CoreDataProperties.m */,
+				B287FCA81D405E050065F5F2 /* TMIOUser.h */,
+				B287FCA91D405E050065F5F2 /* TMIOUser.m */,
+				B2E4FEBC1D3F49030044FD8C /* Model.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,9 +495,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */,
-				B2DF73B91D3F0553000D4998 /* AppDelegate.m in Sources */,
+				B2DF73B91D3F0553000D4998 /* TMIOAppDelegate.m in Sources */,
+				B2E4FEBE1D3F49030044FD8C /* Model.xcdatamodeld in Sources */,
 				B28500031D3F375F00DC0178 /* TMIOUserProfileViewController.m in Sources */,
+				B287FCAB1D405E050065F5F2 /* TMIOUser.m in Sources */,
 				B2DF73B61D3F0553000D4998 /* main.m in Sources */,
+				B287FCAA1D405E050065F5F2 /* TMIOUser+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +745,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2E4FEBC1D3F49030044FD8C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2E4FEBD1D3F49030044FD8C /* Model.xcdatamodel */,
+			);
+			currentVersion = B2E4FEBD1D3F49030044FD8C /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = Models/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B2DF73A91D3F0553000D4998 /* Project object */;
 }

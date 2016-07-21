@@ -3,17 +3,33 @@
 //  teamio
 //
 
-#import "AppDelegate.h"
+#import "TMIOAppDelegate.h"
 #import "TMIOUserListViewController.h"
+#import <CoreData/CoreData.h>
 
-@interface AppDelegate ()
+@interface TMIOAppDelegate ()
+
+@property (nonatomic, strong, readwrite) NSManagedObjectContext* managedObjectContext;
 
 @end
 
-@implementation AppDelegate
+@implementation TMIOAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    self.managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:NULL];
+    NSURL *storeURL = [documentsDirectoryURL URLByAppendingPathComponent:@"db.sqlite"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    self.managedObjectContext.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
+    NSError* error;
+    [self.managedObjectContext.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error];
+    if (error) {
+        NSLog(@"error: %@", error);
+    }
+    self.managedObjectContext.undoManager = [[NSUndoManager alloc] init];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];

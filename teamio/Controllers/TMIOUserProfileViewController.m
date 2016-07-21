@@ -7,7 +7,7 @@
 
 @interface TMIOUserProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) NSDictionary *user;
+@property (strong, nonatomic) TMIOUser *user;
 @property (strong, nonatomic) UITableView *tableView;
 
 @end
@@ -16,11 +16,11 @@
 
 #pragma mark - NSObject
 
-- (instancetype)initWithUserDict:(NSDictionary *)userDict {
+- (instancetype)initWithUser:(TMIOUser *)user {
     self = [super init];
     
     if (self) {
-        _user = userDict;
+        _user = user;
     }
     
     return self;
@@ -31,7 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.user[@"real_name"];
+    self.title = self.user.realName;
+
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -47,13 +48,22 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"@%@", self.user[@"name"]];
+    NSString *labelText = @"";
+    switch (indexPath.row) {
+        case 0:
+            labelText = [NSString stringWithFormat:@"@%@", self.user.userName];
+            break;
+        case 1:
+            labelText = self.user.title;
+            break;
+    }
+    cell.textLabel.text = labelText;
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
