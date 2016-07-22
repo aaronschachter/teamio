@@ -9,6 +9,7 @@
 
 @interface TMIOUserProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) NSString *userPhone;
 @property (strong, nonatomic) TMIOUser *user;
 @property (strong, nonatomic) UITableView *tableView;
 
@@ -23,6 +24,7 @@
     
     if (self) {
         _user = user;
+        _userPhone = [[user.phone componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
     }
     
     return self;
@@ -69,6 +71,7 @@
     }
 
     TMIOUserProfileDataCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileDataCell" forIndexPath:indexPath];
+
     switch (indexPath.row) {
         case 1:
             cell.propertyNameLabelText = @"title";
@@ -76,7 +79,7 @@
             break;
         case 2:
             cell.propertyNameLabelText = @"phone";
-            cell.propertyValueLabelText = self.user.phone;
+            cell.propertyValueLabelText = self.userPhone;
             break;
         case 3:
             cell.propertyNameLabelText = @"email";
