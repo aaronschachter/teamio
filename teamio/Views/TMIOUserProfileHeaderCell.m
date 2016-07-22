@@ -20,8 +20,7 @@
 }
 
 - (void)setProfileImageViewURLString:(NSString *)profileImageViewURLString {
-    // @todo Add placeHolder image.
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:profileImageViewURLString] placeholderImage:nil];
+    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:profileImageViewURLString] placeholderImage:[UIImage imageNamed:@"slackbox"]];
 }
 
 - (void)setUserNameLabelText:(NSString *)userNameLabelText {
