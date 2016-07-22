@@ -2,7 +2,7 @@
 //  TMIOUser+CoreDataProperties.m
 //  teamio
 //
-//  Created by Aaron Schachter on 7/20/16.
+//  Created by Aaron Schachter on 7/21/16.
 //  Copyright © 2016 New School Old School. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,12 +13,14 @@
 
 @implementation TMIOUser (CoreDataProperties)
 
-@dynamic colorHex;
-@dynamic userId;
 @dynamic avatarUri;
-@dynamic userName;
+@dynamic colorHex;
 @dynamic realName;
-@dynamic title;
 @dynamic teamId;
+@dynamic title;
+@dynamic userId;
+@dynamic userName;
+@dynamic email;
+@dynamic phone;
 
 @end

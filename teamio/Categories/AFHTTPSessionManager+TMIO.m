@@ -28,18 +28,20 @@
             TMIOUser *user;
             if (results.count > 0) {
                 user = [results objectAtIndex:0];
-                NSLog(@"Updating userId %@", userId);
+                NSLog(@"Updating user %@", userId);
             }
             else {
                 user = [TMIOUser createUserInManagedObjectContext:managedObjectContext];
-                NSLog(@"Adding userIdl %@", userId);
+                NSLog(@"Adding user %@", userId);
             }
-            user.userId = memberDict[@"id"];
-            user.colorHex = memberDict[@"color"];
-            user.userName = memberDict[@"name"];
-            user.realName = memberDict[@"real_name"];
-            user.avatarUri = [memberDict valueForKeyPath:@"profile.image_192"];
-            user.title = [memberDict valueForKeyPath:@"profile.title"];
+            user.userId = [self valueAsString:memberDict[@"id"]];
+            user.colorHex = [self valueAsString:memberDict[@"color"]];
+            user.userName = [self valueAsString:memberDict[@"name"]];
+            user.realName = [self valueAsString:memberDict[@"real_name"]];
+            user.avatarUri = [self valueAsString:[memberDict valueForKeyPath:@"profile.image_192"]];
+            user.title = [self valueAsString:[memberDict valueForKeyPath:@"profile.title"]];
+            user.phone = [self valueAsString:[memberDict valueForKeyPath:@"profile.phone"]];
+            user.email = [self valueAsString:[memberDict valueForKeyPath:@"profile.email"]];
             [mutableUsers addObject:user];
         }
         NSError *error;
@@ -52,6 +54,18 @@
             errorHandler(error);
         }
     }];
+}
+
+//
+// Sanitizes given target: if target is [NSNull null, return empty string.
+// If not, else return target as NSString.
+//
+- (NSString *)valueAsString:(id)target {
+    NSString *returnString = (NSString *)target;
+    if (target == (id)[NSNull null]) {
+        returnString = @"";
+    }
+    return returnString;
 }
 
 @end

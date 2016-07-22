@@ -5,6 +5,7 @@
 
 #import "TMIOUserProfileViewController.h"
 #import "TMIOUserProfileHeaderCell.h"
+#import "TMIOUserProfileDataCell.h"
 
 @interface TMIOUserProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,8 +40,9 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"profileCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TMIOUserProfileHeaderCell" bundle:nil] forCellReuseIdentifier:@"profileHeaderCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TMIOUserProfileDataCell" bundle:nil] forCellReuseIdentifier:@"profileDataCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.estimatedRowHeight = 44;
+    self.tableView.alwaysBounceVertical = NO;
 
     [self.view addSubview:self.tableView];
 }
@@ -52,7 +54,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -65,8 +67,24 @@
         headerCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return headerCell;
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell" forIndexPath:indexPath];
-    cell.textLabel.text = self.user.title;
+
+    TMIOUserProfileDataCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileDataCell" forIndexPath:indexPath];
+    switch (indexPath.row) {
+        case 1:
+            cell.propertyNameLabelText = @"title";
+            cell.propertyValueLabelText = self.user.title;
+            break;
+        case 2:
+            cell.propertyNameLabelText = @"phone";
+            cell.propertyValueLabelText = self.user.phone;
+            break;
+        case 3:
+            cell.propertyNameLabelText = @"email";
+            cell.propertyValueLabelText = self.user.email;
+            break;
+        default:
+            break;
+    }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return cell;
@@ -78,7 +96,7 @@
     if (indexPath.row == 0) {
         return 220;
     }
-    return UITableViewAutomaticDimension;
+    return 70;
 }
 
 @end

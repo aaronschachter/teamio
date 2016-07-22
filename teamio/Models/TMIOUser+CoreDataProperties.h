@@ -2,7 +2,7 @@
 //  TMIOUser+CoreDataProperties.h
 //  teamio
 //
-//  Created by Aaron Schachter on 7/20/16.
+//  Created by Aaron Schachter on 7/21/16.
 //  Copyright © 2016 New School Old School. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,13 +15,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TMIOUser (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *colorHex;
-@property (nullable, nonatomic, retain) NSString *userId;
 @property (nullable, nonatomic, retain) NSString *avatarUri;
-@property (nullable, nonatomic, retain) NSString *userName;
+@property (nullable, nonatomic, retain) NSString *colorHex;
 @property (nullable, nonatomic, retain) NSString *realName;
-@property (nullable, nonatomic, retain) NSString *title;
 @property (nullable, nonatomic, retain) NSString *teamId;
+@property (nullable, nonatomic, retain) NSString *title;
+@property (nullable, nonatomic, retain) NSString *userId;
+@property (nullable, nonatomic, retain) NSString *userName;
+@property (nullable, nonatomic, retain) NSString *email;
+@property (nullable, nonatomic, retain) NSString *phone;
 
 @end
 

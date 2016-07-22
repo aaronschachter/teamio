@@ -18,6 +18,8 @@
 		B287FCB71D40A2CE0065F5F2 /* AFHTTPSessionManager+TMIO.m in Sources */ = {isa = PBXBuildFile; fileRef = B287FCB61D40A2CE0065F5F2 /* AFHTTPSessionManager+TMIO.m */; };
 		B2C118801D4195C700CEF532 /* TMIOActionButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C1187E1D4195C700CEF532 /* TMIOActionButtonCell.m */; };
 		B2C118811D4195C700CEF532 /* TMIOActionButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C1187F1D4195C700CEF532 /* TMIOActionButtonCell.xib */; };
+		B2C118851D41B59F00CEF532 /* TMIOUserProfileDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C118831D41B59F00CEF532 /* TMIOUserProfileDataCell.m */; };
+		B2C118861D41B59F00CEF532 /* TMIOUserProfileDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C118841D41B59F00CEF532 /* TMIOUserProfileDataCell.xib */; };
 		B2DF73B61D3F0553000D4998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B51D3F0553000D4998 /* main.m */; };
 		B2DF73B91D3F0553000D4998 /* TMIOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73B81D3F0553000D4998 /* TMIOAppDelegate.m */; };
 		B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF73BB1D3F0553000D4998 /* TMIOUserListViewController.m */; };
@@ -67,6 +69,9 @@
 		B2C1187D1D4195C700CEF532 /* TMIOActionButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMIOActionButtonCell.h; path = Views/TMIOActionButtonCell.h; sourceTree = "<group>"; };
 		B2C1187E1D4195C700CEF532 /* TMIOActionButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMIOActionButtonCell.m; path = Views/TMIOActionButtonCell.m; sourceTree = "<group>"; };
 		B2C1187F1D4195C700CEF532 /* TMIOActionButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMIOActionButtonCell.xib; path = Views/TMIOActionButtonCell.xib; sourceTree = "<group>"; };
+		B2C118821D41B59F00CEF532 /* TMIOUserProfileDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMIOUserProfileDataCell.h; path = Views/TMIOUserProfileDataCell.h; sourceTree = "<group>"; };
+		B2C118831D41B59F00CEF532 /* TMIOUserProfileDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMIOUserProfileDataCell.m; path = Views/TMIOUserProfileDataCell.m; sourceTree = "<group>"; };
+		B2C118841D41B59F00CEF532 /* TMIOUserProfileDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMIOUserProfileDataCell.xib; path = Views/TMIOUserProfileDataCell.xib; sourceTree = "<group>"; };
 		B2DF73B11D3F0553000D4998 /* teamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DF73B51D3F0553000D4998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2DF73B71D3F0553000D4998 /* TMIOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMIOAppDelegate.h; sourceTree = "<group>"; };
@@ -165,12 +170,15 @@
 			isa = PBXGroup;
 			children = (
 				B2DF73C21D3F0553000D4998 /* LaunchScreen.storyboard */,
-				B287FCAC1D4088840065F5F2 /* TMIOUserProfileHeaderCell.h */,
-				B287FCAD1D4088840065F5F2 /* TMIOUserProfileHeaderCell.m */,
-				B287FCAE1D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib */,
 				B2C1187D1D4195C700CEF532 /* TMIOActionButtonCell.h */,
 				B2C1187E1D4195C700CEF532 /* TMIOActionButtonCell.m */,
 				B2C1187F1D4195C700CEF532 /* TMIOActionButtonCell.xib */,
+				B287FCAC1D4088840065F5F2 /* TMIOUserProfileHeaderCell.h */,
+				B287FCAD1D4088840065F5F2 /* TMIOUserProfileHeaderCell.m */,
+				B287FCAE1D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib */,
+				B2C118821D41B59F00CEF532 /* TMIOUserProfileDataCell.h */,
+				B2C118831D41B59F00CEF532 /* TMIOUserProfileDataCell.m */,
+				B2C118841D41B59F00CEF532 /* TMIOUserProfileDataCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				B287FCB01D4088840065F5F2 /* TMIOUserProfileHeaderCell.xib in Resources */,
 				B2C118811D4195C700CEF532 /* TMIOActionButtonCell.xib in Resources */,
 				B2DF73C41D3F0553000D4998 /* LaunchScreen.storyboard in Resources */,
+				B2C118861D41B59F00CEF532 /* TMIOUserProfileDataCell.xib in Resources */,
 				B2DF73C11D3F0553000D4998 /* Assets.xcassets in Resources */,
 				B28500001D3F332200DC0178 /* secrets.plist in Resources */,
 			);
@@ -529,6 +538,7 @@
 				B287FCB71D40A2CE0065F5F2 /* AFHTTPSessionManager+TMIO.m in Sources */,
 				B2DF73BC1D3F0553000D4998 /* TMIOUserListViewController.m in Sources */,
 				B2DF73B91D3F0553000D4998 /* TMIOAppDelegate.m in Sources */,
+				B2C118851D41B59F00CEF532 /* TMIOUserProfileDataCell.m in Sources */,
 				B2E4FEBE1D3F49030044FD8C /* Model.xcdatamodeld in Sources */,
 				B28500031D3F375F00DC0178 /* TMIOUserProfileViewController.m in Sources */,
 				B287FCAB1D405E050065F5F2 /* TMIOUser.m in Sources */,
