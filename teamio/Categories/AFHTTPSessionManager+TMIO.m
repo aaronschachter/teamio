@@ -32,7 +32,7 @@
             }
             else {
                 user = [TMIOUser createUserInManagedObjectContext:managedObjectContext];
-                NSLog(@"Adding userId %@", userId);
+                NSLog(@"Adding userIdl %@", userId);
             }
             user.userId = memberDict[@"id"];
             user.colorHex = memberDict[@"color"];
@@ -48,7 +48,9 @@
             completionHandler(mutableUsers.copy);
         }
     } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+        if (errorHandler) {
+            errorHandler(error);
+        }
     }];
 }
 
